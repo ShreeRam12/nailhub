@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar */
+.navfont {
+  font-family: "Poppins", sans-serif;
+}
+.section_font {
+  font-family: "Caveat", sans-serif;
+}
+/* Carousel  */
+
+/* Barber Main Page */
+/* Nailhub.css */
+/* .bg-nailhub {
+  @apply bg-cover bg-center;
+  background-image: url("../../src/assets/Background_Image_Nailhub.webp");
+} */
+
+/* AboutUs  */
+/* styles.css or your main CSS file */
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+
+.typewriter {
+  overflow: hidden; /* Ensures the text is hidden until fully animated */
+  white-space: nowrap; /* Prevents wrapping */
+  border-right: 0.15em solid white; /* Cursor effect */
+  animation: typewriter 4s steps(40, end), blink 0.75s step-end infinite;
+}
