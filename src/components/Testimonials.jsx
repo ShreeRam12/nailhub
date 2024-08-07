@@ -19,7 +19,7 @@ const Testimonials = () => {
                     >
                         {/* Testimonial 1 */}
                         <div className="flex flex-col items-center section_font bg-rose-500 rounded-xl w-5/6 mx-auto p-4">
-                            <div className='w-10 h-20 rounded-full mb-4'>
+                            <div className='w-52 h-20 rounded-full mb-4'>
                                 <img src="https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Jane Doe" className="w-10 h-20 rounded-full mb-4" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2 text-white">Jane Doe</h3>
@@ -30,7 +30,7 @@ const Testimonials = () => {
 
                         {/* Testimonial 2 */}
                         <div className="flex flex-col items-center section_font bg-rose-500 rounded-xl w-5/6 mx-auto p-4">
-                            <div className='w-10 h-20 rounded-full mb-4'>
+                            <div className='w-52 h-20 rounded-full mb-4'>
                                 <img src="https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Jane Doe" className="w-10 h-20 rounded-full mb-4" />
                             </div>                            <h3 className="text-xl font-semibold mb-2 text-white">John Smith</h3>
                             <p className="text-gray-200 max-w-md mx-auto text-center">
@@ -40,7 +40,7 @@ const Testimonials = () => {
 
                         {/* Testimonial 3 */}
                         <div className="flex flex-col items-center section_font bg-rose-500 rounded-xl w-5/6 mx-auto p-4">
-                            <div className='w-10 h-20 rounded-full mb-4'>
+                            <div className='w-52 h-20 rounded-full mb-4'>
                                 <img src="https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Jane Doe" className="w-10 h-20 rounded-full mb-4" />
                             </div>                            <h3 className="text-xl font-semibold mb-2 text-white">Emily Johnson</h3>
                             <p className="text-gray-200 max-w-md mx-auto text-center">
@@ -50,7 +50,7 @@ const Testimonials = () => {
 
                         {/* Testimonial 4 */}
                         <div className="flex flex-col items-center section_font bg-rose-500 rounded-xl w-5/6 mx-auto p-4">
-                            <div className='w-10 h-20 rounded-full mb-4'>
+                            <div className='w-52 h-20 rounded-full mb-4'>
                                 <img src="https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Jane Doe" className="w-10 h-20 rounded-full mb-4" />
                             </div>                            <h3 className="text-xl font-semibold mb-2 text-white">Michael Brown</h3>
                             <p className="text-gray-200 max-w-md mx-auto text-center">
@@ -60,7 +60,7 @@ const Testimonials = () => {
 
                         {/* Testimonial 5 */}
                         <div className="flex flex-col items-center section_font bg-rose-500 rounded-xl w-5/6 mx-auto p-4">
-                            <div className='w-10 h-20 rounded-full mb-4'>
+                            <div className='w-52 h-20 rounded-full mb-4'>
                                 <img src="https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Jane Doe" className="w-10 h-20 rounded-full mb-4" />
                             </div>                            <h3 className="text-xl font-semibold mb-2 text-white">Sarah Davis</h3>
                             <p className="text-gray-200 max-w-md mx-auto text-center">
