@@ -8,10 +8,10 @@ const AboutUS = () => {
                 <div className="mb-6 text-center lg:w-1/2">
                     <img src={About_US} alt="About Us" className="mx-auto w-full lg:w-auto h-4/5 rounded" />
                 </div>
-                <div className='w-full lg:w-1/2 lg:pl-10'>
+                <div className='text-white w-full lg:w-1/2 lg:pl-10'>
                     <div className="">
-                        <h1 className="text-4xl lg:text-7xl font-bold text-center lg:text-left section_font">About Us</h1>
-                        <h2 className="text-lg lg:text-xl font-semibold text-center lg:text-left mt-2 navfont">Nail Hub Nail Salon</h2>
+                        <h1 className="text-4xl  lg:text-7xl font-bold text-center lg:text-left section_font">About Us</h1>
+                        <h2 className="text-lg  lg:text-xl font-bold text-center lg:text-left mt-2 navfont">Nail Hub Nail Salon</h2>
                     </div>
                     <div className="mt-6 lg:mt-10 navfont">
                         <p className="text-base lg:text-lg text-center lg:text-left">

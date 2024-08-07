@@ -10,8 +10,8 @@ const Navbar = () => {
     };
 
     return (
-        <div>
-            <section className="sticky top-0 left-0 z-50">
+        <div className='sticky top-0 left-0 z-50 shadow-xl'>
+            <section className="">
                 <div className="bg-rose-300 shadow-lg">
                     <div className="container mx-auto flex items-center justify-between py-3 px-5">
                         <div className="w-28 md:w-32 lg:w-40 cursor-pointer">
@@ -23,7 +23,7 @@ const Navbar = () => {
                             <a href="services.html"
                                 className="hover:text-rose-500 text-black duration-500 ease-in-out animate__animated animate__fadeInUp">Services</a>
                             <a href="pricing.html"
-                                className="hover:text-rose-500 text-black duration-500 ease-in-out animate__animated animate__fadeInUp">Pricing</a>
+                                className="hover:text-rose-500 text-black duration-500 ease-in-out animate__animated animate__fadeInUp">Gallery</a>
                             <a href="appointment.html"
                                 className="hover:text-rose-500 text-black duration-500 ease-in-out animate__animated animate__fadeInUp">Book
                                 an Appointment</a>

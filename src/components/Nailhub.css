@@ -20,8 +20,9 @@
 /* Barber Main Page */
 /* Nailhub.css */
 /* .bg-nailhub {
-  @apply bg-cover bg-center;
-  background-image: url("../../src/assets/Background_Image_Nailhub.webp");
+  background-image: url("/assets/Background_Image_Nailhub.webp");
+  background-size: cover;
+  background-position: center;
 } */
 
 /* AboutUs  */
@@ -50,4 +51,40 @@
   white-space: nowrap; /* Prevents wrapping */
   border-right: 0.15em solid white; /* Cursor effect */
   animation: typewriter 4s steps(40, end), blink 0.75s step-end infinite;
+}
+
+@keyframes vibgyor {
+  0% {
+    color: violet;
+  }
+  14% {
+    color: indigo;
+  }
+  28% {
+    color: blue;
+  }
+  42% {
+    color: green;
+  }
+  57% {
+    color: yellow;
+  }
+  71% {
+    color: orange;
+  }
+  85% {
+    color: red;
+  }
+  100% {
+    color: violet;
+  }
+}
+
+.animate-vibgyor {
+  animation: vibgyor 5s linear infinite;
+}
+@media (min-width: 320px) and (max-width: 1024px) {
+  .client_section {
+    margin-top: 300px;
+  }
 }
