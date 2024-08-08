@@ -6,9 +6,9 @@ import NailArt3 from '..//..//src/assets/Nailcare.webp';
 import NailArt4 from '..//..//src/assets/Nailcare2.webp';
 const Card = () => {
     return (
-        <div className=' bg-rose-200 pb-20'>
+        <div className=' bg-red-500 pb-20'>
             <div className='pt-20'>
-                <div className="section_font text-center  font-bold text-5xl">NailHub Info</div>
+                <div className="section_font text-center  text-white font-bold text-5xl">NailHub Info</div>
             </div>
             <section className='container mx-auto navfont pt-14'>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 animate__animated animate__fadeInUp p-5 sm:p-0 ">
@@ -21,9 +21,6 @@ const Card = () => {
                             <p class="text-gray-700 mb-4 group-hover:text-white">Long lasting manicure that doesn't use UV light to harden, The color comes from dipping your nails into a pigment</p>
                         </div>
                     </div>
-
-
-
                     <div class="bg-white p-6 rounded shadow-2xl group hover:bg-rose-500 transition duration-700">
                         <div>
                             <img src={NailArt2} alt="Nail_Hub2"
