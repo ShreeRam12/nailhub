@@ -1,9 +1,11 @@
+// src/components/Navbar.js
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Nailhub.css';
 import Nailhub from '../../src/assets/Nailhub_Logo.webp';
 
 const Navbar = () => {
-    const [menuOpen, setMenuOpen] = useState();
+    const [menuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -18,20 +20,21 @@ const Navbar = () => {
                             <img src={Nailhub} alt="Nailhub Logo" />
                         </div>
                         <div className="hidden md:flex md:space-x-5 lg:space-x-10 md:text-md lg:text-lg navfont">
-                            <a href="landing_page.html"
-                                className="hover:text-rose-500 text-black duration-500 ease-in-out animate__animated animate__fadeInUp">Home</a>
-                            <a href="services.html"
-                                className="hover:text-rose-500 text-black duration-500 ease-in-out animate__animated animate__fadeInUp">Services</a>
-                            <a href="pricing.html"
-                                className="hover:text-rose-500 text-black duration-500 ease-in-out animate__animated animate__fadeInUp">Gallery</a>
-                            <a href="appointment.html"
-                                className="hover:text-rose-500 text-black duration-500 ease-in-out animate__animated animate__fadeInUp">Book
-                                an Appointment</a>
-                            <a href="blogs.html"
-                                className="hover:text-rose-500 text-black duration-500 ease-in-out animate__animated animate__fadeInUp">Blogs</a>
-                            <a href="contactus.html"
+                            <Link to={"/"}
+                                className="hover:text-rose-500 text-black duration-500 ease-in-out animate__animated animate__fadeInUp">Home</Link>
+                            <Link to={"/services"}
+                                className="hover:text-rose-500 text-black duration-500 ease-in-out animate__animated animate__fadeInUp">Services</Link>
+                            <Link to={"/gallery"}
+                                className="hover:text-rose-500 text-black duration-500 ease-in-out animate__animated animate__fadeInUp">Gallery</Link>
+                            <Link to={"/shop"}
+                                className="hover:text-rose-500 text-black duration-500 ease-in-out animate__animated animate__fadeInUp">Shop</Link>
+                            <Link to="/blogs"
+                                className="hover:text-rose-500 text-black duration-500 ease-in-out animate__animated animate__fadeInUp">Blogs</Link>
+                            <Link to={"/faq"}
+                                className="hover:text-rose-500 text-black duration-500 ease-in-out animate__animated animate__fadeInUp">FAQ</Link>
+                            <Link to={"/contactus"}
                                 className="hover:text-rose-500 text-black duration-500 ease-in-out animate__animated animate__fadeInUp">Contact
-                                Us</a>
+                                Us</Link>
                         </div>
                         <div className="hidden md:flex gap-5">
                             <div>
@@ -51,12 +54,12 @@ const Navbar = () => {
 
                 <div className={`${menuOpen ? 'block' : 'hidden'} fixed bg-rose-300 w-full z-30 md:hidden lg:hidden`} id="mobile-menu">
                     <div className="flex flex-col items-center space-y-4 py-5 navfont">
-                        <a href="landing_page.html" className="hover:text-rose-700 navfont animate__animated animate__fadeInUp">Home</a>
-                        <a href="services.html" className="hover:text-rose-700 navfont animate__animated animate__fadeInUp">Services</a>
-                        <a href="pricing.html" className="hover:text-rose-700 animate__animated animate__fadeInUp">Gallery</a>
-                        <a href="appointment.html" className="hover:text-rose-700 navfont animate__animated animate__fadeInUp">Shop</a>
-                        <a href="blogs.html" className="hover:text-rose-700 navfont animate__animated animate__fadeInUp">Blogs</a>
-                        <a href="contactus.html" className="hover:text-rose-700 navfont animate__animated animate__fadeInUp">Contact Us</a>
+                        <Link to={"/"} className="hover:text-rose-700 navfont animate__animated animate__fadeInUp">Home</Link>
+                        <Link to={"/services"} className="hover:text-rose-700 navfont animate__animated animate__fadeInUp">Services</Link>
+                        <Link to={"/gallery"} className="hover:text-rose-700 animate__animated animate__fadeInUp">Gallery</Link>
+                        <Link to={"/appointment"} className="hover:text-rose-700 navfont animate__animated animate__fadeInUp">Shop</Link>
+                        <Link to={"/blogs"} className="hover:text-rose-700 navfont animate__animated animate__fadeInUp">Blogs</Link>
+                        <Link to={"/contactus"} className="hover:text-rose-700 navfont animate__animated animate__fadeInUp">Contact Us</Link>
                         <div className="flex gap-5">
                             <div>
                                 <i className="fa-solid fa-magnifying-glass"></i>

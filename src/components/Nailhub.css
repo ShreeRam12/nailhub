@@ -88,3 +88,35 @@
     margin-top: 300px;
   }
 }
+/* src/Nailhub.css */
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 2px solid #ccc;
+}
+
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.tab:hover {
+  background-color: #f0f0f0;
+}
+
+.tab.active {
+  border-bottom: 2px solid #ff6347;
+  font-weight: bold;
+}
+
+.tab-content {
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+}

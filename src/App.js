@@ -1,25 +1,26 @@
-import './App.css';
-import AboutUS from './components/AboutUS';
-import Card from './components/Card';
-import Client from './components/Client';
-import Footer from './components/Footer';
-import HeroSection from './components/HeroSection';
-import NailExtension from './components/NailExtension';
-import Navbar from './components/Navbar';
-import Testimonials from './components/Testimonials';
-
+// src/App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './components/Home';
+import Services from './components/Services';
+import Gallery from './components/Gallery';
+import Shop from './components/Shop';
+import Blogs from './components/Blogs';
+import FAQ from './components/FAQ';
+import ContactUS from './components/ContactUS';
 function App() {
   return (
-    <>
-      <Navbar />
-      <HeroSection />
-      <Card />
-      <AboutUS />
-      <Client />
-      <Testimonials />
-      <NailExtension />
-      <Footer />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/contactus" element={<ContactUS />} />
+      </Routes>
+    </Router>
   );
 }
 

@@ -15,7 +15,7 @@ const Footer = () => {
                 <div className="flex flex-col md:flex-row md:justify-between">
                     {/* Company Info */}
                     <div className="mb-6 md:mb-0">
-                        <div className="w-52">
+                        <div className="w-40">
                             <img src={Nailhub} alt="Nailhub_Logo" />
                         </div>
                         <h2 className="text-2xl font-bold mb-4">Nailhub</h2>
@@ -57,14 +57,6 @@ const Footer = () => {
                             </li>
                             <li>
                                 <a
-                                    href="/pricing"
-                                    className="hover:text-rose-400 duration-500 ease-in-out"
-                                >
-                                    Pricing
-                                </a>
-                            </li>
-                            <li>
-                                <a
                                     href="/gallery"
                                     className="hover:text-rose-400 duration-500 ease-in-out"
                                 >
@@ -72,8 +64,8 @@ const Footer = () => {
                                 </a>
                             </li>
                             <li>
-                                <a href="/appointment" className="hover:text-rose-400">
-                                    Book an Appointment
+                                <a href="/shop" className="hover:text-rose-400">
+                                    Shop
                                 </a>
                             </li>
                             <li>
