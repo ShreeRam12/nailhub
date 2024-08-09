@@ -19,12 +19,22 @@
 
 /* Barber Main Page */
 /* Nailhub.css */
-/* .bg-nailhub {
-  background-image: url("/assets/Background_Image_Nailhub.webp");
+.client {
+  background-image: url("../../src//assets//NailHub_Info.webp");
   background-size: cover;
   background-position: center;
-} */
+}
+.aboutus {
+  background-image: url("../../src//assets//AboutUS.webp");
+  background-size: cover;
+  background-position: center;
+}
 
+.testimonials {
+  background-image: url("../../src//assets//NailExtension.webp");
+  background-size: cover;
+  background-position: center;
+}
 /* AboutUs  */
 /* styles.css or your main CSS file */
 @keyframes typewriter {

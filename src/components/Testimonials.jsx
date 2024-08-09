@@ -5,8 +5,8 @@ import './Nailhub.css';
 
 const Testimonials = () => {
     return (
-        <div>
-            <section className="py-12 bg-gray-100">
+        <div className=''>
+            <section className="py-12 bg-gray-100 navfont">
                 <div className="container mx-auto px-4">
                     <h2 className="text-4xl font-bold text-center mb-12">Testimonials</h2>
                     <Carousel
