@@ -14,7 +14,7 @@ const Navbar = () => {
     return (
         <div className='sticky top-0 left-0 z-50 shadow-xl'>
             <section className="">
-                <div className="bg-gray-300 shadow-lg">
+                <div className="bg-white shadow-lg">
                     <div className="container mx-auto flex items-center justify-between py-3 px-5">
                         <div className="w-28 md:w-32 lg:w-40 cursor-pointer">
                             <img src={Nailhub} alt="Nailhub Logo" />

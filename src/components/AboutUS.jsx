@@ -4,7 +4,7 @@ import About_US from '../../src/assets/Nailhub_indian.webp';
 const AboutUS = () => {
     return (
         <div className='aboutus'>
-            <div className='lg:p-10 bg-black bg-opacity-50 '>
+            <div className='lg:p-10 bg-black bg-opacity-15 '>
                 <section className="bg-contain container mx-auto flex flex-col lg:flex-row items-center lg:items-start p-6 pt-10">
                     <div className="mb-6 text-center lg:w-1/2">
                         <img src={About_US} alt="About Us" className="mx-auto w-full lg:w-auto h-4/5 rounded" />

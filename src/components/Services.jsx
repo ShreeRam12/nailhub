@@ -87,183 +87,186 @@ const Services = () => {
     return (
         <div>
             <Navbar />
-            <section className='text-center mt-10 animate__animated animate__fadeIn animate__delay-1s'>
-                <div className="text-3xl text-rose-300 font-bold navfont">Nail Saloon</div>
-                <div className="text-3xl mt-10 font-bold section_font text-rose-500">Services</div>
-            </section>
-            <section className='container mx-auto navfont pt-14 animate__animated animate__fadeIn animate__delay-1s'>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 animate__animated animate__fadeInUp p-5 sm:p-0">
-                    {services.map((service, index) => (
-                        <div key={index} className="bg-white p-6 rounded shadow-2xl group hover:bg-rose-500 transition duration-700">
-                            <div>
-                                <img src={service.image} alt={`Nail_Art ${index + 1}`} className="w-full h-52 rounded mb-4 object-cover" />
-                            </div>
-                            <div className="pt-5">
-                                <h2 className="text-xl font-bold mb-2 group-hover:text-white">{service.title}</h2>
-                                <p className="text-gray-700 mb-4 group-hover:text-white">{service.description}</p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </section>
-
-            {/* Working Hours */}
-            <section>
-                <div className="text-center mt-20 animate__animated animate__fadeInDown animate__delay-1s">
-                    <div className="text-3xl text-rose-300 font-bold navfont">Nail Saloon</div>
-                    <div className="text-3xl mt-10 font-bold section_font text-rose-500">Working Hours</div>
-                </div>
-                <div className='container mx-auto flex justify-around mt-10 animate__animated animate__bounceInUp animate__delay-1s'>
-                    <div>
-                        <ul className='section_font text-pink-500 font-bold text-3xl space-y-3'>
-                            <li>Monday - 9:00am to 17:00pm </li>
-                            <li>Tuesday - Holiday</li>
-                            <li>Wednesday - 9:00am to 17:00pm</li>
-                            <li>Thursday - 9:00am to 17:00pm</li>
-                            <li>Friday - 9:00am to 17:00pm</li>
-                            <li>Saturday - 9:00am to 22:00pm</li>
-                            <li>Sunday - 9:00am to 22:00pm</li>
-                        </ul>
-                    </div>
-                    <div className='w-2/5 shadow-2xl'>
-                        <img src={Working} alt="Working" className="rounded-md" />
-                    </div>
-                </div>
-            </section>
-
-            {/* Book Appointment Button */}
-            <div className='flex justify-center mt-16 animate__animated animate__fadeIn animate__delay-1s'>
-                <div
-                    className='bg-red-500 p-5 flex justify-center items-center w-66 rounded-2xl cursor-pointer'
-                    onClick={() => setIsFormOpen(true)}
-                >
-                    <div className='text-white navfont'>Book an appointment</div>
-                </div>
-            </div>
-
-            {/* Popup Form */}
-            {isFormOpen && (
-                <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center z-50 navfont">
-                    <div className="bg-white rounded-lg w-11/12 md:w-1/2 lg:w-1/3 p-6 relative">
-                        <button onClick={() => setIsFormOpen(false)} className="absolute top-4 right-4 text-gray-600">
-                            &times;
-                        </button>
-                        <h2 className="text-xl font-bold mb-4">Book an Appointment</h2>
-
-                        {step === 1 && (
-                            <div>
-                                <label className="block mb-2">Select Service</label>
-                                <select
-                                    name="service"
-                                    value={formData.service}
-                                    onChange={handleChange}
-                                    className="border p-2 w-full rounded-lg"
-                                >
-                                    <option value="">Select a service</option>
-                                    <option value="Manicure">Manicure</option>
-                                    <option value="Pedicure">Pedicure</option>
-                                    <option value="Nail Art">Nail Art</option>
-                                </select>
-                                {errors.service && <p className="text-red-500">{errors.service}</p>}
-                                <button onClick={handleNext} className="bg-blue-500 text-white mt-4 p-2 rounded-lg">Next</button>
-                            </div>
-                        )}
-
-                        {step === 2 && (
-                            <div>
-                                <label className="block mb-2">Select Date</label>
-                                <input
-                                    type="date"
-                                    name="date"
-                                    value={formData.date}
-                                    onChange={handleChange}
-                                    className="border p-2 w-full rounded-lg"
-                                />
-                                {errors.date && <p className="text-red-500">{errors.date}</p>}
-
-                                <label className="block mt-4 mb-2">Select Time</label>
-                                <input
-                                    type="time"
-                                    name="time"
-                                    value={formData.time}
-                                    onChange={handleChange}
-                                    className="border p-2 w-full rounded-lg"
-                                />
-                                {errors.time && <p className="text-red-500">{errors.time}</p>}
-
-                                <div className="flex justify-between mt-4">
-                                    <button onClick={handleBack} className="bg-gray-500 text-white p-2 rounded-lg">Back</button>
-                                    <button onClick={handleNext} className="bg-blue-500 text-white p-2 rounded-lg">Next</button>
+            <div className='services'>
+                <section className=' text-center pt-10 animate__animated animate__fadeIn animate__delay-1s'>
+                    <div className="text-3xl text-rose-400 font-bold navfont">Nail Saloon</div>
+                    <div className="text-3xl mt-10 font-bold section_font text-rose-500">Services</div>
+                </section>
+                <section className='container mx-auto navfont pt-14 animate__animated animate__fadeIn animate__delay-1s'>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 animate__animated animate__fadeInUp p-5 sm:p-0">
+                        {services.map((service, index) => (
+                            <div key={index} className="bg-white p-6 rounded shadow-2xl group hover:bg-rose-500 transition duration-700">
+                                <div>
+                                    <img src={service.image} alt={`Nail_Art ${index + 1}`} className="w-full h-52 rounded mb-4 object-cover" />
                                 </div>
-                            </div>
-                        )}
-
-                        {step === 3 && (
-                            <div>
-                                <label className="block mb-2">Name</label>
-                                <input
-                                    type="text"
-                                    name="name"
-                                    value={formData.name}
-                                    onChange={handleChange}
-                                    className="border p-2 w-full rounded-lg"
-                                />
-                                {errors.name && <p className="text-red-500">{errors.name}</p>}
-
-                                <label className="block mt-4 mb-2">Email</label>
-                                <input
-                                    type="email"
-                                    name="email"
-                                    value={formData.email}
-                                    onChange={handleChange}
-                                    className="border p-2 w-full rounded-lg"
-                                />
-                                {errors.email && <p className="text-red-500">{errors.email}</p>}
-
-                                <label className="block mt-4 mb-2">Phone</label>
-                                <input
-                                    type="tel"
-                                    name="phone"
-                                    value={formData.phone}
-                                    onChange={handleChange}
-                                    className="border p-2 w-full rounded-lg"
-                                />
-                                {errors.phone && <p className="text-red-500">{errors.phone}</p>}
-
-                                <div className="flex justify-between mt-4">
-                                    <button onClick={handleBack} className="bg-gray-500 text-white p-2 rounded-lg">Back</button>
-                                    <button onClick={handleSubmit} className="bg-green-500 text-white p-2 rounded-lg">Submit</button>
+                                <div className="pt-5">
+                                    <h2 className="text-xl font-bold mb-2 group-hover:text-white">{service.title}</h2>
+                                    <p className="text-gray-700 mb-4 group-hover:text-white">{service.description}</p>
                                 </div>
-                            </div>
-                        )}
-
-                        {step === 4 && (
-                            <div className="text-center">
-                                <h2 className="text-xl font-bold">Appointment Booked Successfully!</h2>
-                                <p className="mt-4">You will receive a confirmation message shortly.</p>
-                                <button onClick={() => setIsFormOpen(false)} className="bg-blue-500 text-white mt-4 p-2 rounded-lg">Close</button>
-                            </div>
-                        )}
-                    </div>
-                </div>
-            )}
-
-            {/* Our Best Works */}
-            <section className='pb-20 animate__animated animate__fadeIn animate__delay-1s '>
-                <div className='text-center mt-20 p-10'>
-                    <div className='text-3xl text-rose-300 font-bold navfont'>We did it </div>
-                    <div className='text-3xl mt-10 font-bold section_font text-rose-500'>Our Best Works</div>
-                </div>
-                <div className="container mx-auto mt-10 ">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 animate__animated animate__flipInX animate__delay-2s">
-                        {[Best1, Best2, Best3, Best4, Best5, Best6].map((image, index) => (
-                            <div key={index}>
-                                <img src={image} alt={`Best${index + 1}`} className="w-full rounded-lg shadow-xl" />
                             </div>
                         ))}
                     </div>
+                </section>
+
+                {/* Working Hours */}
+                <section className=''>
+                    <div className="text-center mt-20 animate__animated animate__fadeInDown animate__delay-1s">
+                        <div className="text-3xl text-rose-300 font-bold navfont">Nail Saloon</div>
+                        <div className="text-3xl mt-10 font-bold section_font text-rose-500">Working Hours</div>
+                    </div>
+                    <div className=' bg-white rounded-lg shandow-lg p-10 container mx-auto flex justify-around mt-10 animate__animated animate__bounceInUp animate__delay-1s'>
+                        <div>
+                            <ul className='section_font text-pink-500 font-bold text-3xl space-y-3'>
+                                <li>Monday - 9:00am to 17:00pm </li>
+                                <li>Tuesday - Holiday</li>
+                                <li>Wednesday - 9:00am to 17:00pm</li>
+                                <li>Thursday - 9:00am to 17:00pm</li>
+                                <li>Friday - 9:00am to 17:00pm</li>
+                                <li>Saturday - 9:00am to 22:00pm</li>
+                                <li>Sunday - 9:00am to 22:00pm</li>
+                            </ul>
+                        </div>
+                        <div className='w-2/5 shadow-2xl'>
+                            <img src={Working} alt="Working" className="rounded-md" />
+                        </div>
+                    </div>
+                </section>
+
+                {/* Book Appointment Button */}
+                <div className='flex justify-center mt-16 animate__animated animate__fadeIn animate__delay-1s'>
+                    <div
+                        className='bg-red-500 p-5 flex justify-center items-center w-66 rounded-2xl cursor-pointer'
+                        onClick={() => setIsFormOpen(true)}
+                    >
+                        <div className='text-white navfont'>Book an appointment</div>
+                    </div>
                 </div>
-            </section>
+
+                {/* Popup Form */}
+                {isFormOpen && (
+                    <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center z-50 navfont">
+                        <div className="bg-white rounded-lg w-11/12 md:w-1/2 lg:w-1/3 p-6 relative">
+                            <button onClick={() => setIsFormOpen(false)} className="absolute top-4 right-4 text-gray-600">
+                                &times;
+                            </button>
+                            <h2 className="text-xl font-bold mb-4">Book an Appointment</h2>
+
+                            {step === 1 && (
+                                <div>
+                                    <label className="block mb-2">Select Service</label>
+                                    <select
+                                        name="service"
+                                        value={formData.service}
+                                        onChange={handleChange}
+                                        className="border p-2 w-full rounded-lg"
+                                    >
+                                        <option value="">Select a service</option>
+                                        <option value="Manicure">Manicure</option>
+                                        <option value="Pedicure">Pedicure</option>
+                                        <option value="Nail Art">Nail Art</option>
+                                    </select>
+                                    {errors.service && <p className="text-red-500">{errors.service}</p>}
+                                    <button onClick={handleNext} className="bg-blue-500 text-white mt-4 p-2 rounded-lg">Next</button>
+                                </div>
+                            )}
+
+                            {step === 2 && (
+                                <div>
+                                    <label className="block mb-2">Select Date</label>
+                                    <input
+                                        type="date"
+                                        name="date"
+                                        value={formData.date}
+                                        onChange={handleChange}
+                                        className="border p-2 w-full rounded-lg"
+                                    />
+                                    {errors.date && <p className="text-red-500">{errors.date}</p>}
+
+                                    <label className="block mt-4 mb-2">Select Time</label>
+                                    <input
+                                        type="time"
+                                        name="time"
+                                        value={formData.time}
+                                        onChange={handleChange}
+                                        className="border p-2 w-full rounded-lg"
+                                    />
+                                    {errors.time && <p className="text-red-500">{errors.time}</p>}
+
+                                    <div className="flex justify-between mt-4">
+                                        <button onClick={handleBack} className="bg-gray-500 text-white p-2 rounded-lg">Back</button>
+                                        <button onClick={handleNext} className="bg-blue-500 text-white p-2 rounded-lg">Next</button>
+                                    </div>
+                                </div>
+                            )}
+
+                            {step === 3 && (
+                                <div>
+                                    <label className="block mb-2">Name</label>
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        value={formData.name}
+                                        onChange={handleChange}
+                                        className="border p-2 w-full rounded-lg"
+                                    />
+                                    {errors.name && <p className="text-red-500">{errors.name}</p>}
+
+                                    <label className="block mt-4 mb-2">Email</label>
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        value={formData.email}
+                                        onChange={handleChange}
+                                        className="border p-2 w-full rounded-lg"
+                                    />
+                                    {errors.email && <p className="text-red-500">{errors.email}</p>}
+
+                                    <label className="block mt-4 mb-2">Phone</label>
+                                    <input
+                                        type="tel"
+                                        name="phone"
+                                        value={formData.phone}
+                                        onChange={handleChange}
+                                        className="border p-2 w-full rounded-lg"
+                                    />
+                                    {errors.phone && <p className="text-red-500">{errors.phone}</p>}
+
+                                    <div className="flex justify-between mt-4">
+                                        <button onClick={handleBack} className="bg-gray-500 text-white p-2 rounded-lg">Back</button>
+                                        <button onClick={handleSubmit} className="bg-green-500 text-white p-2 rounded-lg">Submit</button>
+                                    </div>
+                                </div>
+                            )}
+
+                            {step === 4 && (
+                                <div className="text-center">
+                                    <h2 className="text-xl font-bold">Appointment Booked Successfully!</h2>
+                                    <p className="mt-4">You will receive a confirmation message shortly.</p>
+                                    <button onClick={() => setIsFormOpen(false)} className="bg-blue-500 text-white mt-4 p-2 rounded-lg">Close</button>
+                                </div>
+                            )}
+                        </div>
+                    </div>
+                )}
+
+                {/* Our Best Works */}
+                <section className='pb-20 animate__animated animate__fadeIn animate__delay-1s '>
+                    <div className='text-center mt-20 p-10'>
+                        <div className='text-3xl text-rose-300 font-bold navfont'>We did it </div>
+                        <div className='text-3xl mt-10 font-bold section_font text-rose-500'>Our Best Works</div>
+                    </div>
+                    <div className="container mx-auto mt-10 ">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 animate__animated animate__flipInX animate__delay-2s">
+                            {[Best1, Best2, Best3, Best4, Best5, Best6].map((image, index) => (
+                                <div key={index}>
+                                    <img src={image} alt={`Best${index + 1}`} className="w-full rounded-lg shadow-xl" />
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            </div>
+
             <Footer />
         </div>
     );

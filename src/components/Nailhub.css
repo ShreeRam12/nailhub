@@ -15,17 +15,25 @@
 .section_font {
   font-family: "Caveat", sans-serif;
 }
-/* Carousel  */
-
-/* Barber Main Page */
 /* Nailhub.css */
+.nailbg{
+  background-image: url("..//..//src/assets/Nail_BG.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+.nailclient{
+  background-image: url("..//..//src/assets/Background_Image_Nailhub.webp");
+  background-size: cover;
+  background-position: center;
+}
 .client {
   background-image: url("../../src//assets//NailHub_Info.webp");
   background-size: cover;
   background-position: center;
 }
 .aboutus {
-  background-image: url("../../src//assets//AboutUS.webp");
+  background-image: url("../../src//assets//About_US.webp");
   background-size: cover;
   background-position: center;
 }
@@ -35,34 +43,28 @@
   background-size: cover;
   background-position: center;
 }
+.services{
+  background-image: url("../../src//assets//Servicesbg1.webp");
+  background-size: cover;
+  background-position: center;
+}
+.faq{
+  background-image: url("../../src//assets//FAQ.webp");
+  background-size: cover;
+  background-position: center;
+}
+.gallery{
+  background-image: url("../../src//assets//Gallerybg.webp");
+  background-size: cover;
+  background-position: center;
+}
+.contactus {
+  background-image: url("../../src//assets//Contactusbg.webp");
+  background-size: cover;
+  background-position: center;
+}
 /* AboutUs  */
 /* styles.css or your main CSS file */
-@keyframes typewriter {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes blink {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: white;
-  }
-}
-
-.typewriter {
-  overflow: hidden; /* Ensures the text is hidden until fully animated */
-  white-space: nowrap; /* Prevents wrapping */
-  border-right: 0.15em solid white; /* Cursor effect */
-  animation: typewriter 4s steps(40, end), blink 0.75s step-end infinite;
-}
-
 @keyframes vibgyor {
   0% {
     color: violet;
