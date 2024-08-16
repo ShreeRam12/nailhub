@@ -58,6 +58,11 @@
   background-size: cover;
   background-position: center;
 }
+.shop_bg{
+  background-image: url("../../src//assets//Shop_BG.webp");
+  background-size: cover;
+  background-position: center;
+}
 .contactus {
   background-image: url("../../src//assets//Contactusbg.webp");
   background-size: cover;
