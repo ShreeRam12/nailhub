@@ -21,7 +21,7 @@ const Tabs = () => {
         <div className='testimonials'>
             <div className=" bg-black bg-opacity-50">
                 <div className="container mx-auto p-4 ">
-                    <div className='text-5xl font-bold section_font text-center pt-10'>Nail Extension</div>
+                    <div className='text-5xl font-bold section_font text-white text-center pt-10'>Nail Extension</div>
                     {/* Tab navigation */}
                     <div className="flex flex-wrap justify-center mb-8 navfont pt-10">
                         <button
@@ -60,8 +60,8 @@ const Tabs = () => {
                     <div className="p-4 bg-gray-100 rounded-md text-center navfont">
                         {activeTab === 'Nail Extension: Acrylic' && (
                             <>
-                                <h2 className="text-2xl font-bold mb-4">Nail Extension: Acrylic</h2>
-                                <div>
+                                <h2 className="text-3xl font-bold mb-4 pt-5 text-rose-500 section_font">Nail Extension: Acrylic</h2>
+                                <div className='pt-10'>
                                     <img src="https://th.bing.com/th?id=OIP.6vpFSDhRMasgiFUK_BJDcQHaEK&w=474&h=266&c=7&qlt=80&bgcl=fffffe&r=0&o=6&pid=MultiSMRSV2Source" alt="Nail Extension: Acrylic" className="mx-auto mb-4 max-w-xs md:max-w-md" />
                                 </div>
                                 <div className='mt-20'>
@@ -84,7 +84,7 @@ const Tabs = () => {
                         )}
                         {activeTab === 'Nail Extension – Poly Gel' && (
                             <>
-                                <h2 className="text-3xl font-bold mb-4 section_font pt-5">Nail Extension – Poly Gel</h2>
+                                <h2 className="text-3xl font-bold mb-4 text-rose-500 section_font pt-5">Nail Extension – Poly Gel</h2>
                                 <div className='pt-10'>
                                     <img src="https://images.pexels.com/photos/3997391/pexels-photo-3997391.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Nail Extension – Poly Gel" className="mx-auto mb-4 max-w-xs md:max-w-md" />
                                 </div>
@@ -105,7 +105,7 @@ const Tabs = () => {
                         )}
                         {activeTab === 'Nail Manicure 1' && (
                             <>
-                                <h2 className="text-3xl font-bold mb-4 section_font pt-5">Nail Manicure</h2>
+                                <h2 className="text-3xl font-bold mb-4 text-rose-500 section_font pt-5">Nail Manicure</h2>
                                 <div className='pt-10'>
                                     <img src="https://th.bing.com/th/id/OIP.4nLiigBj3UaCFkLicfJPfwHaHa?rs=1&pid=ImgDetMain" alt="Nail Manicure" className="mx-auto mb-4 max-w-xs md:max-w-md" />
                                 </div>
@@ -120,7 +120,7 @@ const Tabs = () => {
                         )}
                         {activeTab === 'Nail Manicure 2' && (
                             <>
-                                <h2 className="text-3xl font-bold mb-4 section_font pt-5">Nail Manicure</h2>
+                                <h2 className="text-3xl font-bold mb-4 text-rose-500 section_font pt-5">Nail Manicure</h2>
                                 <div className='pt-10'>
                                     <img src="https://images.pexels.com/photos/3997379/pexels-photo-3997379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Nail Manicure" className="mx-auto mb-4 max-w-xs md:max-w-md" />
                                 </div>
@@ -134,7 +134,7 @@ const Tabs = () => {
                         )}
                         {activeTab === 'French Manicure' && (
                             <>
-                                <h2 className="text-2xl font-bold mb-4">French Manicure</h2>
+                                <h2 className="text-2xl font-bold mb-4 pt-5 section_font text-rose-500">French Manicure</h2>
                                 <div>
                                     <img src="https://images.pexels.com/photos/7244222/pexels-photo-7244222.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="French Manicure" className="mx-auto mb-4 max-w-xs md:max-w-md" />
                                 </div>

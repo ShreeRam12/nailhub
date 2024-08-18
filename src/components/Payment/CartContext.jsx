@@ -10,13 +10,13 @@ export const CartProvider = ({ children }) => {
         setCart([...cart, product]);
     };
 
-    const removeFromCart = (productId) => {
-        setCart(cart.filter((item) => item.id !== productId));
-    };
+    // const removeFromCart = (productId) => {
+    //     setCart(cart.filter((item) => item.id !== productId));
+    // };
 
     return (
         <div className='navfont'>
-            <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
+            <CartContext.Provider value={{ cart,addToCart }}>
                 {children}
             </CartContext.Provider>
         </div>

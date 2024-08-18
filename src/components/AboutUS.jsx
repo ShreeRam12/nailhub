@@ -3,16 +3,27 @@ import About_US from '../../src/assets/Nailhub_indian.webp';
 
 const AboutUS = () => {
     return (
-        <div className='aboutus'>
-            <div className='lg:p-10 bg-black bg-opacity-15 '>
-                <section className="bg-contain container mx-auto flex flex-col lg:flex-row items-center lg:items-start p-6 pt-10">
+        <div className="aboutus">
+            <div className="lg:p-10 p-6 bg-black bg-opacity-15">
+                <section className="container mx-auto flex flex-col lg:flex-row items-center lg:items-start p-6 pt-10">
+                    {/* Image Section */}
                     <div className="mb-6 text-center lg:w-1/2">
-                        <img src={About_US} alt="About Us" className="mx-auto w-full lg:w-auto h-4/5 rounded" />
+                        <img
+                            src={About_US}
+                            alt="About Us"
+                            className="mx-auto w-full lg:w-auto h-auto rounded"
+                        />
                     </div>
-                    <div className='text-white w-full lg:w-1/2 lg:pl-10'>
-                        <div className="">
-                            <h1 className="text-4xl  lg:text-7xl font-bold text-center lg:text-left section_font">About Us</h1>
-                            <h2 className="text-lg  lg:text-xl font-bold text-center lg:text-left mt-2 navfont">Nail Hub Nail Salon</h2>
+
+                    {/* Text Content Section */}
+                    <div className="text-white w-full lg:w-1/2 lg:pl-10">
+                        <div>
+                            <h1 className="text-4xl lg:text-7xl font-bold text-center lg:text-left section_font">
+                                About Us
+                            </h1>
+                            <h2 className="text-lg lg:text-xl font-bold text-center lg:text-left mt-2 navfont">
+                                Nail Hub Nail Salon
+                            </h2>
                         </div>
                         <div className="mt-6 lg:mt-10 navfont">
                             <p className="text-base lg:text-lg text-center lg:text-left">
@@ -29,7 +40,6 @@ const AboutUS = () => {
                 </section>
             </div>
         </div>
-
     );
 };
 

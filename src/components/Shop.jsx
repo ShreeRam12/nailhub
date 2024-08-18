@@ -15,7 +15,7 @@ import NailPolish from '..//..//src/assets/Cleaner.webp';
 import NailStrength from '..//..//src/assets/Nail_Strengthener.webp';
 import UVNaillamps from '..//..//src/assets/UV_Lights_Nail.webp';
 import Pedicure from '..//..//src/assets/Pedicure_Kit.webp';
-import Pedicurecream from '..//..//src/assets/Pedicure_Cream.webp'; 
+import Pedicurecream from '..//..//src/assets/Pedicure_Cream.webp';
 import { CartProvider } from '../components/Payment/CartContext';
 
 const products = [
@@ -41,14 +41,15 @@ const Shop = () => {
                 <div className="container mx-auto px-4 py-8">
                     <h1 className="text-3xl font-bold mb-8 text-rose-300 text-center">Nailhub Shop</h1>
                     <h1 className="text-3xl font-bold mb-8 text-rose-500 text-center section_font">Shopping</h1>
-
                     <div className="products grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
                         {products.map(product => (
                             <Product key={product.id} product={product} />
                         ))}
                     </div>
                 </div>
-                <Steps/>
+                <div className='pb-20'>
+                    <Steps />
+                </div>
             </section>
             <Footer />
         </CartProvider>
