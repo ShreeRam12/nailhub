@@ -1,14 +1,23 @@
 import React from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import { useForm } from 'react-hook-form';
 import 'animate.css';
+
 const ContactUs = () => {
+    const { register, handleSubmit, formState: { errors } } = useForm();
+
+    const onSubmit = (data) => {
+        console.log('Form data:', data);
+        // Handle form submission here, e.g., sending data to an API
+    };
+
     return (
         <div>
             <Navbar />
-            <section className="contactus ">
-                <div className='bg-black bg-opacity-35 pb-10 '>
-                    <div className="container mx-auto px-5 ">
+            <section className="contactus">
+                <div className='bg-black bg-opacity-35 pb-10'>
+                    <div className="container mx-auto px-5">
                         <h2 className="animate__animated animate__fadeInDown text-3xl font-bold text-center text-white mb-8 navfont pt-5">Contact Us</h2>
 
                         {/* Contact Form */}
@@ -28,29 +37,52 @@ const ContactUs = () => {
                                     </div>
                                     <div className="flex items-center">
                                         <i className="fa-solid fa-location-dot text-white mr-3"></i>
-                                        <span className="text-white"> 6th Main, 38th Cross
-                                            Rd, Jayanagar 9th Block, Jayanagar, Bengaluru, Karnataka 560069</span>
+                                        <span className="text-white"> 6th Main, 38th Cross Rd, Jayanagar 9th Block, Jayanagar, Bengaluru, Karnataka 560069</span>
                                     </div>
                                 </div>
                             </div>
                             <div className='animate__animated animate__fadeInDown'>
                                 <h3 className="text-2xl font-semibold mb-4 text-white section_font">Get in Touch</h3>
-                                <form className="space-y-5 navfont">
+                                <form className="space-y-5 navfont" onSubmit={handleSubmit(onSubmit)}>
                                     <div>
                                         <label className="block text-white font-medium">Name</label>
-                                        <input type="text" className="w-full p-3 border border-gray-300 rounded-md" placeholder="Your Name" required />
+                                        <input
+                                            type="text"
+                                            className="w-full p-3 border border-gray-300 rounded-md"
+                                            placeholder="Your Name"
+                                            {...register('name', { required: 'Name is required' })}
+                                        />
+                                        {errors.name && <p className="text-white">{errors.name.message}</p>}
                                     </div>
                                     <div>
                                         <label className="block text-white font-medium">Email</label>
-                                        <input type="email" className="w-full p-3 border border-gray-300 rounded-md" placeholder="Your Email" required />
+                                        <input
+                                            type="email"
+                                            className="w-full p-3 border border-gray-300 rounded-md"
+                                            placeholder="Your Email"
+                                            {...register('email', { required: 'Email is required', pattern: { value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, message: 'Invalid email address' } })}
+                                        />
+                                        {errors.email && <p className="text-white">{errors.email.message}</p>}
                                     </div>
                                     <div>
                                         <label className="block text-white font-medium">Phone</label>
-                                        <input type="text" className="w-full p-3 border border-gray-300 rounded-md" placeholder="Your Phone Number" required />
+                                        <input
+                                            type="text"
+                                            className="w-full p-3 border border-gray-300 rounded-md"
+                                            placeholder="Your Phone Number"
+                                            {...register('phone', { required: 'Phone number is required', pattern: { value: /^[0-9]{10}$/, message: 'Phone number must be 10 digits' } })}
+                                        />
+                                        {errors.phone && <p className="text-white">{errors.phone.message}</p>}
                                     </div>
                                     <div>
                                         <label className="block text-white font-medium">Message</label>
-                                        <textarea className="w-full p-3 border border-gray-300 rounded-md" placeholder="Your Message" rows="4" required></textarea>
+                                        <textarea
+                                            className="w-full p-3 border border-gray-300 rounded-md"
+                                            placeholder="Your Message"
+                                            rows="4"
+                                            {...register('message', { required: 'Message is required' })}
+                                        ></textarea>
+                                        {errors.message && <p className="text-white">{errors.message.message}</p>}
                                     </div>
                                     <button type="submit" className="w-full bg-black text-white p-3 rounded-md hover:bg-pink-500 transition duration-300">
                                         Send Message
@@ -72,17 +104,13 @@ const ContactUs = () => {
                                     loading="lazy"
                                 ></iframe>
                             </div>
-
-
                         </div>
                     </div>
                 </div>
-
             </section>
             <Footer />
         </div>
     );
-}
+};
 
 export default ContactUs;
-
