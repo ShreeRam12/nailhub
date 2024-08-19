@@ -76,7 +76,7 @@ const Services = () => {
 
             // Send the data via WhatsApp
             const whatsappMessage = `Service: ${formData.service}\nDate: ${formData.date}\nTime: ${formData.time}\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}`;
-            const whatsappURL = `https://wa.me/9342315641?text=${encodeURIComponent(whatsappMessage)}`;
+            const whatsappURL = `https://wa.me/9886662344?text=${encodeURIComponent(whatsappMessage)}`;
             window.open(whatsappURL, '_blank');
 
             // Close the form
@@ -109,29 +109,40 @@ const Services = () => {
                 </section>
 
                 {/* Working Hours */}
-                <section className=''>
-                    <div className="text-center mt-20 animate__animated animate__fadeInDown animate__delay-1s">
-                        <div className="text-3xl text-rose-300 font-bold navfont">Nail Saloon</div>
-                        <div className="text-3xl mt-10 font-bold section_font text-rose-500">Working Hours</div>
+                <section className="py-10 px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mt-10 animate__animated animate__fadeInDown animate__delay-1s">
+                        <div className="text-3xl text-rose-300 font-bold navfont">
+                            Nail Saloon
+                        </div>
+                        <div className="text-3xl mt-5 font-bold section_font text-rose-500">
+                            Working Hours
+                        </div>
                     </div>
-                    <div className=' bg-white rounded-lg shandow-lg p-10 container mx-auto flex justify-around mt-10 animate__animated animate__bounceInUp animate__delay-1s'>
-                        <div>
-                            <ul className='section_font text-pink-500 font-bold text-3xl space-y-3'>
-                                <li>Monday - 9:00am to 17:00pm </li>
+
+                    <div className="bg-white rounded-lg shadow-lg p-6 md:p-10 container mx-auto mt-10 flex flex-col md:flex-row justify-around items-center animate__animated animate__bounceInUp animate__delay-1s">
+                        {/* Working Hours List */}
+                        <div className="md:w-1/2 text-center md:text-left">
+                            <ul className="section_font text-pink-500 font-bold text-xl md:text-2xl space-y-2">
+                                <li>Monday - 9:00am to 5:00pm</li>
                                 <li>Tuesday - Holiday</li>
-                                <li>Wednesday - 9:00am to 17:00pm</li>
-                                <li>Thursday - 9:00am to 17:00pm</li>
-                                <li>Friday - 9:00am to 17:00pm</li>
-                                <li>Saturday - 9:00am to 22:00pm</li>
-                                <li>Sunday - 9:00am to 22:00pm</li>
+                                <li>Wednesday - 9:00am to 5:00pm</li>
+                                <li>Thursday - 9:00am to 5:00pm</li>
+                                <li>Friday - 9:00am to 5:00pm</li>
+                                <li>Saturday - 9:00am to 10:00pm</li>
+                                <li>Sunday - 9:00am to 10:00pm</li>
                             </ul>
                         </div>
-                        <div className='w-2/5 shadow-2xl'>
-                            <img src={Working} alt="Working" className="rounded-md" />
+
+                        {/* Working Image */}
+                        <div className="w-full md:w-1/2 mt-6 md:mt-0">
+                            <img
+                                src={Working}
+                                alt="Working"
+                                className="w-full h-auto rounded-md shadow-2xl"
+                            />
                         </div>
                     </div>
                 </section>
-
                 {/* Book Appointment Button */}
                 <div className='flex justify-center mt-16 animate__animated animate__fadeIn animate__delay-1s'>
                     <div
@@ -251,11 +262,11 @@ const Services = () => {
 
                 {/* Our Best Works */}
                 <section className='pb-20 animate__animated animate__fadeIn animate__delay-1s '>
-                    <div className='text-center mt-20 p-10'>
+                    <div className='text-center mt-10 lg:mt-20 p-10'>
                         <div className='text-3xl text-rose-300 font-bold navfont'>We did it </div>
                         <div className='text-3xl mt-10 font-bold section_font text-rose-500'>Our Best Works</div>
                     </div>
-                    <div className="container mx-auto mt-10 ">
+                    <div className="container mx-auto lg:mt-10 p-5 sm:p-5">
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 animate__animated animate__flipInX animate__delay-2s">
                             {[Best1, Best2, Best3, Best4, Best5, Best6].map((image, index) => (
                                 <div key={index}>

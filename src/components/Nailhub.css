@@ -63,6 +63,11 @@
   background-size: cover;
   background-position: center;
 }
+.blogs_bg{
+  background-image: url("../../src//assets//Blogs_BG.webp");
+  background-size: cover;
+  background-position: center;
+}
 .contactus {
   background-image: url("../../src//assets//Contactusbg.webp");
   background-size: cover;

@@ -56,9 +56,9 @@ const Blogs = () => {
     return (
         <div>
             <Navbar />
-            <section>
+            <section className='blogs_bg'>
                 <div className="max-w-6xl mx-auto p-6">
-                    <h2 className="text-3xl font-bold text-center mb-8 section_font">Latest Blogs</h2>
+                    <h2 className="text-3xl lg:text-4xl font-bold text-center mb-8 section_font text-rose-500">Latest Blogs</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 navfont">
                         {blogs.map((blog, index) => (
                             <div key={index} className="bg-white shadow-xl rounded-lg overflow-hidden">
@@ -66,7 +66,7 @@ const Blogs = () => {
                                 <div className="p-4">
                                     <h3 className="text-xl font-semibold mb-2">{blog.title}</h3>
                                     <p className="text-gray-600 mb-4">{blog.excerpt}</p>
-                                    <a href={blog.link} className="text-blue-500 hover:underline">Read More</a>
+                                    {/* <a href={blog.link} className="text-blue-500 hover:underline">Read More</a> */}
                                 </div>
                             </div>
                         ))}

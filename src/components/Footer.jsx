@@ -108,7 +108,7 @@ const Footer = () => {
                                 </a>
                                 <a
                                     href="https://x.com/nailhubX"
-                                    className="text-gray-400 hover:text-white transition duration-500"
+                                    className="text-gray-400 hover:text-blue-500  transition duration-500"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
@@ -116,7 +116,7 @@ const Footer = () => {
                                 </a>
                                 <a
                                     href="https://www.instagram.com/nailhub_nidhi/"
-                                    className="text-gray-400 hover:text-white transition duration-500"
+                                    className="text-gray-400 hover:text-pink-500 transition duration-500"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
@@ -124,7 +124,7 @@ const Footer = () => {
                                 </a>
                                 <a
                                     href="https://www.linkedin.com/in/nailhub-bangalore/"
-                                    className="text-gray-400 hover:text-white transition duration-500"
+                                    className="text-gray-400 hover:text-blue-500 transition duration-500"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >

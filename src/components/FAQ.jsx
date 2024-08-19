@@ -10,23 +10,25 @@ const FAQ = () => {
     };
 
     return (
-        <div>
+        <div className="flex flex-col min-h-screen">
             <Navbar />
-            <section className='faq '>
-                <div className='bg-black bg-opacity-20'>
-                    <div className="container mx-auto px-4 py-8 navfont pt-10">
+            <section className="flex-grow faq">
+                <div className="bg-black bg-opacity-20">
+                    <div className="container mx-auto px-4 py-8">
                         <h2 className="text-3xl sm:text-4xl lg:text-5xl text-rose-500 font-bold text-center mb-8 section_font">
                             Frequently Asked Questions
                         </h2>
-                        <div className="mb-8 text-center navfont">
-                            <p className="text-xl font-bold text-rose-500 mb-4 ">
+
+                        <div className="mb-8 text-center">
+                            <p className="text-xl sm:text-2xl font-bold text-rose-500 mb-4">
                                 Do you have any questions? Ask us.
                             </p>
-                            <p className="text-md text-rose-500">
+                            <p className="text-md sm:text-lg text-rose-500 leading-relaxed">
                                 Please read the questions below, and if you cannot find your answer, please send us your question. We will answer you as soon as possible. We depend on volunteers from our local community, and by joining us, you can both gain experience and help others.
                             </p>
                         </div>
-                        <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-10">
+
+                        <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-6 sm:p-8 md:p-10">
                             {[
                                 {
                                     question: 'How long do nail extensions last?',
@@ -73,12 +75,12 @@ Place your order. Your custom-fit stick-on nails will be delivered, perfectly ma
                                 <div key={index} className="mb-4">
                                     <button
                                         onClick={() => toggle(index)}
-                                        className="w-full text-left px-4 py-2 bg-white border rounded-lg shadow-sm focus:outline-none focus:ring"
+                                        className="w-full text-left px-4 py-2 bg-rose-50 border rounded-lg shadow-sm focus:outline-none focus:ring hover:bg-rose-100 transition-colors"
                                     >
                                         Q: {faq.question}
                                     </button>
                                     {open === index && (
-                                        <div className="px-4 py-2">
+                                        <div className="px-4 py-2 text-gray-700">
                                             <p>A: {faq.answer}</p>
                                         </div>
                                     )}
@@ -87,7 +89,6 @@ Place your order. Your custom-fit stick-on nails will be delivered, perfectly ma
                         </div>
                     </div>
                 </div>
-
             </section>
             <Footer />
         </div>

@@ -6,7 +6,7 @@ const HeroSection = () => {
     return (
         <section className='nailbg w-full h-screen bg-cover bg-center'>
             <div className='flex justify-center items-center w-full h-full bg-black bg-opacity-5 '>
-                <div className='navfont bg-gradient-to-r from-violet-500 via-sky-500 to-emerald-500 bg-clip-text text-transparent font-bold text-lg lg:text-7xl'>
+                <div className='flex justify-center items-center navfont bg-gradient-to-r from-violet-500 via-sky-500 to-emerald-500 bg-clip-text text-transparent font-bold text-2xl lg:text-7xl'>
                     <Typewriter
                         options={{
                             strings: [

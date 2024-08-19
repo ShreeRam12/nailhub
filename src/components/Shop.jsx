@@ -39,9 +39,9 @@ const Shop = () => {
             <Navbar />
             <section className="shop shop_bg">
                 <div className="container mx-auto px-4 py-8">
-                    <h1 className="text-3xl font-bold mb-8 text-rose-300 text-center">Nailhub Shop</h1>
-                    <h1 className="text-3xl font-bold mb-8 text-rose-500 text-center section_font">Shopping</h1>
-                    <div className="products grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+                    <h1 className="text-3xl font-bold mb-8 text-rose-300 text-center animate__animated animate__fadeInDown">Nailhub Shop</h1>
+                    <h1 className="text-3xl font-bold mb-8 text-rose-500 text-center section_font animate__animated animate__fadeIn">Shopping</h1>
+                    <div className="products grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8 animate__animated animate__fadeInUp">
                         {products.map(product => (
                             <Product key={product.id} product={product} />
                         ))}

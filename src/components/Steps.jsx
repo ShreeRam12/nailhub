@@ -17,7 +17,7 @@ const OrderSteps = () => {
         <section className="order-steps">
             <div className="bg-white rounded-lg container mx-auto px-4 p-5 ">
                 <h1 className="text-3xl font-bold mb-8 text-center text-rose-500">Order Your Stick-On Nails</h1>
-                <div className='flex justify-around section_font text-rose-500  p-10 sm:p-10'>
+                <div className='flex justify-around flex-wrap md:flex-nowrap section_font text-rose-500  p-10 sm:p-10'>
                     {/* Step 1 */}
                     <div className="step mb-8">
                         <h2 className="lg:text-2xl font-semibold mb-4">Step 1: Place your hands on an A4 sheet</h2>
