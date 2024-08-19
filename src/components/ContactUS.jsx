@@ -9,10 +9,10 @@ const ContactUs = () => {
             <section className="contactus ">
                 <div className='bg-black bg-opacity-35 pb-10 '>
                     <div className="container mx-auto px-5 ">
-                        <h2 className="text-3xl font-bold text-center text-white mb-8 navfont pt-5">Contact Us</h2>
+                        <h2 className="animate__animated animate__fadeInDown text-3xl font-bold text-center text-white mb-8 navfont pt-5">Contact Us</h2>
 
                         {/* Contact Form */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 animate__animated animate__fadeInDown">
                             {/* Contact Information */}
                             <div className="flex flex-col justify-center">
                                 <h3 className="text-2xl font-semibold mb-4 text-white section_font">Contact Information</h3>
@@ -33,7 +33,7 @@ const ContactUs = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div>
+                            <div className='animate__animated animate__fadeInDown'>
                                 <h3 className="text-2xl font-semibold mb-4 text-white section_font">Get in Touch</h3>
                                 <form className="space-y-5 navfont">
                                     <div>
@@ -60,7 +60,7 @@ const ContactUs = () => {
                         </div>
 
                         {/* Map Section */}
-                        <div className="mt-10 section_font">
+                        <div className="mt-10 section_font animate__animated animate__fadeInDown">
                             <h3 className="text-2xl font-semibold text-white text-center mb-4">Find Us Here</h3>
                             <div className="w-full h-64 md:h-96">
                                 <iframe

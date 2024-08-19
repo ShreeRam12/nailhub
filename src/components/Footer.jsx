@@ -10,7 +10,7 @@ import "./Nailhub.css";
 
 const Footer = () => {
     return (
-        <footer className="bg-gray-100 py-10">
+        <footer className="bg-gray-100 py-10  animate__animated animate__fadeInDown">
             <div className="container mx-auto px-4">
                 <div className="bg-white rounded-lg shadow-lg p-8 navfont">
                     <div className="flex flex-wrap md:flex-nowrap">

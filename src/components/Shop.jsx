@@ -20,7 +20,7 @@ import { CartProvider } from '../components/Payment/CartContext';
 
 const products = [
     { id: 1, name: 'Classic Nail Polish ', price: '\u20B9 25', image: Classicimage },
-    { id: 2, name: 'Manicure Sets', price: '\u20B9 15', image: Manicuresets },
+    { id: 2, name: 'Manicure Sets', price: '\u20B9 100', image: Manicuresets },
     { id: 3, name: 'Manicure Set', price: '\u20B9 30', image: Manicureset },
     { id: 4, name: 'Gel Nail Kit', price: '\u20B9 40', image: Gelnailkit },
     { id: 5, name: 'Nail Stamping Kit', price: '\u20B9 20', image: NailStamp },
